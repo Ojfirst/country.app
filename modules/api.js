@@ -9,5 +9,4 @@ export const fetchAPI =  async (city) => {
     } catch (error) {
       throw new error('Failed to fetch city content');
     }
-  
 }
