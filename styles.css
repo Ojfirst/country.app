@@ -2,11 +2,44 @@
   --pri-color: #333;
   --sec-color: #fff;
   --bg-color:#f8f8f8;
-  --btn-color: rgb(18, 133, 65);
+  --btn-color: rgb(19, 105, 55);
+  --spec-color: orangered;
   --Roboto: "Roboto", sans-serif;
   font-optical-sizing: auto
 }
 
+/* Utilities */
+.spec {
+  color: var(--spec-color)
+}
+
+.spec-two {
+  color: var(--btn-color);
+  font-weight: 500;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+
+.btn-gray {
+  background: var(--pri-color);
+  color: var(--sec-color);
+}
+.btn-grn {
+  background: var(--btn-color);
+  color: var(--sec-color);
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
 
 html {
   scroll-behavior: smooth;
@@ -39,7 +72,7 @@ a {
   height: 100%;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto;
   padding: 20px;
   background: var(--sec-color);
 }
@@ -59,7 +92,7 @@ nav {
 
 .nav-list {
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 .nav-list li {
   list-style-type: none;
@@ -104,11 +137,13 @@ div.hero h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 }
 
-#input-form button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  background: var(--btn-color);
-  color: var(--sec-color);
-  font-size: 20px;
+
+/* Section COUNTRY_INFO */
+.info-container {
+
+}
+
+img {
+  max-width: 50px;
+  max-height: 35px;
 }
