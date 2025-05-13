@@ -1,8 +1,8 @@
 :root {
   --pri-color: #333;
   --sec-color: #fff;
-  --bg-color:#ccc;
-  --btn-color: rgb(71, 235, 139);
+  --bg-color:#f8f8f8;
+  --btn-color: rgb(18, 133, 65);
   --Roboto: "Roboto", sans-serif;
   font-optical-sizing: auto
 }
@@ -32,7 +32,7 @@ a {
 .header {
   height: 60vh;
   width: 100vw;
-  background: var(--pri-color);
+  background: var(--bg-color);
 }
 
 .container {
@@ -60,4 +60,55 @@ nav {
 .nav-list {
   display: flex;
   gap: 20px;
+}
+.nav-list li {
+  list-style-type: none;
+}
+
+div.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 3rem ;
+}
+
+div.hero h1 {
+  margin: 2rem 0;
+}
+
+#input-form {
+  padding: 5px;
+  width: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+
+}
+
+#input-form input {
+  padding: 4px;
+  border: 1px solid var(--pri-color);
+  border-radius: 5px;
+  font-size: 20px;
+  width: 80%;
+  outline: none;
+
+}
+
+#input-form input:hover {
+  transform: scale(1.02);
+  transition: all 0.23s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+
+#input-form button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--btn-color);
+  color: var(--sec-color);
+  font-size: 20px;
 }
