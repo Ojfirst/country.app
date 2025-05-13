@@ -1,4 +1,5 @@
-// Displays Country titile
-export const title = (tile) => {
-  return title;
+
+// Message sanitizer
+export const addMessage =  (message) => {
+  return message;
 }
