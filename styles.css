@@ -1,6 +1,7 @@
 :root {
   --pri-color: #333;
   --sec-color: #fff;
+  --uni-color: #455;
   --bg-color:#f8f8f8;
   --btn-color: rgb(19, 105, 55);
   --spec-color: orangered;
@@ -9,12 +10,22 @@
 }
 
 /* Utilities */
+
+h3 {
+  color: var(--uni-color);
+}
 .spec {
   color: var(--spec-color)
 }
 
 .country-details {
-  font-weight: 800;
+  font-size: 14px;
+  color: var(--uni-color);
+}
+
+.country-details span {
+  color: var(--pri-color);
+  font-size: 18px;
 }
 
 .spec-two {
@@ -60,10 +71,12 @@ body {
   font-family: var(--Roboto);
   background: var(--bg-color);
   color: var(--pri-color);
+  line-height: 1.5;
 }
 a {
   text-decoration: none;
   color: var(--pri-color);
+  cursor: pointer;
 }
 
 .header {
@@ -143,12 +156,24 @@ div.hero h1 {
 }
 
 
-/* Section COUNTRY_INFO */
-/* .info-container {
-
-} */
+#Identity-geography .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
 
 img {
   max-width: 50px;
   max-height: 35px;
+}
+
+.country-info {
+  padding: 10px;
+  border: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+
+.official-symbol {
+  display: flex;
+  justify-content: space-between;
 }
