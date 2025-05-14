@@ -1,6 +1,7 @@
 
 import { fetchAPI } from "./modules/api.js";
 import { countryUI } from "./modules/dom.js";
+import { inputSanitiazer } from "./modules/utilis.js";
 
 
 const init = () => {
@@ -10,7 +11,7 @@ const init = () => {
     e.preventDefault();
 
     const userInput = document.querySelector('#user-city-input');
-    const city = userInput.value;
+    const city = inputSanitiazer(userInput.value);
 
     try {
       if (!city) {
