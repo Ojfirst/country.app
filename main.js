@@ -2,6 +2,7 @@
 import { fetchAPI } from "./modules/api.js";
 import { countryUI } from "./modules/dom.js";
 import { inputSanitiazer } from "./modules/utilis.js";
+import { cityValidator } from "./modules/validation.js";
 
 
 const init = () => {
@@ -14,9 +15,8 @@ const init = () => {
     const city = inputSanitiazer(userInput.value);
 
     try {
-      if (!city) {
-        throw new Error('Please enter a city name');
-      }
+      // Check if the city is empty or contains invalid characters
+        cityValidator(city);
       const rawData = await fetchAPI(city);
       console.log(rawData);
       const processedData = {
