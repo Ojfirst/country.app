@@ -2,7 +2,18 @@ import { addMessage } from "./utilis.js";
 
 // This is a test scrip
 export const countryUI = {
-  test: (data) => {
+
+  showError: (error, duration = 3000) => {
+    const outputError = document.querySelector('#show-error');
+    
+    if (!outputError) return;
+    outputError.textContent = error;
+    outputError.classList.remove('hidden');
+
+    setTimeout(() => outputError.classList.add('hidden'), duration)
+  },
+
+  showData: (data) => {
     // This function is used to update the UI with the fetched data
     
     document.querySelector('#country-offical-name').textContent = data.officailName;   // Update the UI with the official name of the country

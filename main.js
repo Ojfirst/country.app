@@ -19,7 +19,7 @@ const init = () => {
       cityValidator(city);
       const rawData = await fetchAPI(city);
       console.log(rawData);
-      
+
       const processedData = {
         officailName: rawData[0].name.official,
         flag: rawData[0].flags.png,
@@ -45,9 +45,10 @@ const init = () => {
       }
       console.log(processedData);
 
-      countryUI.test(processedData);
+      countryUI.showData(processedData);
     } catch (error) {
       console.error(error);
+      countryUI.showError(error)
       return;
     }
 
