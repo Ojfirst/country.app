@@ -16,9 +16,10 @@ const init = () => {
 
     try {
       // Check if the city is empty or contains invalid characters
-        cityValidator(city);
+      cityValidator(city);
       const rawData = await fetchAPI(city);
       console.log(rawData);
+      
       const processedData = {
         officailName: rawData[0].name.official,
         flag: rawData[0].flags.png,

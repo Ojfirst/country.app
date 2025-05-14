@@ -5,14 +5,17 @@
   --bg-color:#f8f8f8;
   --btn-color: rgb(19, 105, 55);
   --spec-color: orangered;
+  --opacity-black-one: rgba(0, 0, 0, 0.5);
+  --opacity-black-two: rgba(0, 0, 0, 0.9);
   --Roboto: "Roboto", sans-serif;
-  font-optical-sizing: auto
+  --font-optical-sizing: auto;
 }
 
 /* Utilities */
 
 h3 {
   color: var(--uni-color);
+  margin-bottom: 1rem;
 }
 .spec {
   color: var(--spec-color)
@@ -80,9 +83,10 @@ a {
 }
 
 .header {
+  background: linear-gradient(var(--opacity-black-one), var(--opacity-black-two)), url(images/country-image.jpg) no-repeat center center/cover;
   height: 60vh;
   width: 100vw;
-  background: var(--bg-color);
+  color: var(--sec-color);
 }
 
 .container {
@@ -91,8 +95,6 @@ a {
   max-width: 1200px;
   margin: 2rem auto;
   padding: 20px;
-  background: var(--sec-color);
-  overflow: auto;
 }
 
 nav {
@@ -100,7 +102,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid var(--pri-color);
+  border-bottom: 1px solid var(--bg-color);
 }
 
 .social-media {
@@ -168,7 +170,7 @@ img {
 }
 
 .country-info {
-  padding: 10px;
+  padding: 20px 30px;
   border: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 }
