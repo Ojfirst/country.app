@@ -1,7 +1,7 @@
 
 import { fetchAPI } from "./modules/api.js";
 import { countryUI } from "./modules/dom.js";
-import { inputSanitiazer, convertToLatlng} from "./modules/utilis.js";
+import { inputSanitiazer, convertToLatlng, convertToPopulation, convertToArea } from "./modules/utilis.js";
 import { cityValidator } from "./modules/validation.js";
 
 
@@ -27,10 +27,10 @@ const init = () => {
         countryName: rawData[0].name.common,        
         countryCapital: rawData[0].capital,
         continents: rawData[0].continents,
-        population: rawData[0].population,
+        population: convertToPopulation(rawData[0].population),
         currencyName: Object.keys(rawData[0].currencies)[0],
         currencySymbol: Object.values(rawData[0].currencies)[0].symbol,
-        area: rawData[0].area,
+        area: convertToArea(rawData[0].area),
         language: Object.values(rawData[0].languages).join(', '),
 
         // Region

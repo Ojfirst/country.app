@@ -13,6 +13,24 @@ export const convertToLatlng = (coordinate) => {
   return `${degrees}° ${minutes}' ${seconds}"`;
 }
 
+
+// Helper function for population conversion
+export const convertToPopulation = (population) => {
+  if (!population) return '';
+  const number = parseInt(population);
+  if (isNaN(number)) return '';
+  return number.toLocaleString();
+}
+
+// Helper function for area in square kilometers with 2 decimal places and symbol
+export const convertToArea = (area) => {
+  if (!area) return '';
+  const number = parseFloat(area);
+  if (isNaN(number)) return '';
+  return `${number.toFixed(2)} km²`;
+}
+
+
 // Message sanitizer
 export const addMessage =  (message) => {
   return message;
