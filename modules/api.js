@@ -19,3 +19,12 @@ export const fetchAPI =  async (city) => {
       throw new Error(`Failed to fetch city data: ${error.message}`);
     }
 }
+
+
+export const api = 'cf98b032e39c4ee7b5adb9ef5c15fcfb';
+
+export const fetchUrls = async (city) => {
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=${city}&apiKey=${api}`);
+    const message = await response.json();
+    return message
+}
