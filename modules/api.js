@@ -16,6 +16,6 @@ export const fetchAPI =  async (city) => {
       }
       return await response.json();
     } catch (error) {
-      throw new Error('Failed to fetch city content');
+      throw new Error(`Failed to fetch city data: ${error.message}`);
     }
 }

@@ -1,7 +1,7 @@
 
 import { fetchAPI } from "./modules/api.js";
 import { countryUI } from "./modules/dom.js";
-import { inputSanitiazer } from "./modules/utilis.js";
+import { inputSanitiazer, convertToLatlng} from "./modules/utilis.js";
 import { cityValidator } from "./modules/validation.js";
 
 
@@ -37,8 +37,8 @@ const init = () => {
         map: rawData[0].maps.openStreetMaps,
         region: rawData[0].region,
         subregion: rawData[0].subregion,
-        lat: rawData[0].latlng[0],
-        lng: rawData[0].latlng[1],
+        lat: convertToLatlng(rawData[0].latlng[0]),
+        lng: convertToLatlng(rawData[0].latlng[1]),
         // Timezone
         timeZone: rawData[0].timezones,
 
