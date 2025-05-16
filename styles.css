@@ -60,6 +60,11 @@ h3 {
   opacity: 0.8;
 }
 
+.text-center {
+  text-align: center;
+  margin: 0 1rem;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -116,6 +121,10 @@ nav {
   z-index: 1000;
 }
 
+nav .logo small {
+  color: var(--special);
+}
+
 .social-media {
   display: flex;
   gap: 10px;
@@ -139,6 +148,7 @@ div.hero {
 }
 
 div.hero h1 {
+  font-size: 2rem;
   margin: 2rem 0;
 }
 
@@ -176,10 +186,12 @@ div.hero p {
 }
 
 
-#Identity-geography .container {
+#Identity-geography .inner-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5px;
+  margin-bottom: 1rem;
+  margin: 1rem 1rem;
 }
 
 img {
@@ -190,8 +202,19 @@ img {
 .country-info {
   padding: 20px 30px;
   border: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+  
 }
+
+/* div.country-info .officail-info#time-zone {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+} */
 
 .official-symbol {
   display: flex;
@@ -206,4 +229,92 @@ img {
   color: red;
   padding: 0.5rem;
   margin-top: 2rem;
+}
+
+@media (max-width: 500px) {
+  .country-details {
+    font-size: 12px;
+  }
+  .country-details span {
+    font-size: 16px;
+  }
+  #input-form input {
+    width: 200px;
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+  div.hero h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+  }
+
+  
+  
+
+
+  .header {
+    height: 60vh;
+    width: 100vw;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    align-items:flex-start;
+    gap: 5px;
+    padding: .5rem 10px 1rem;
+  }
+
+  nav .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 5px;
+  }
+ 
+
+  #Identity-geography .inner-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem 1rem;
+  }
+  .error-message {
+    padding: 0.5rem;
+    margin-top: 2rem 1rem;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .country-details {
+    font-size: 12px;
+  }
+  .country-details span {
+    font-size: 16px;
+  }
+  #input-form input {
+    width: 200px;
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+
+  div.hero h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+
+  }
 }
