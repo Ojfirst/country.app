@@ -246,6 +246,38 @@ img {
   margin-top: 2rem;
 }
 
+footer.main {
+  background: var(--pri-color);
+  color: var(--sec-color);
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: baseline;
+  justify-content:center;
+  border-top: 1px solid var(--bg-color);
+  max-width: 1200px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+nav.footer-nav {
+
+  display: block;
+  position: relative;
+  bottom: 0;
+  left: 0;  
+  right: 0;
+  z-index: 1000;
+}
+
+div.footer-text {
+  color: var(--special);
+}
+
 /* Mobile */
 @media (max-width: 500px) {
   .country-details {
