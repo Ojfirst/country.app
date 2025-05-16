@@ -42,6 +42,7 @@ h3 {
   border: none;
   border-radius: 5px;
   font-size: 18px;
+  cursor: pointer;
 }
 
 
@@ -55,9 +56,8 @@ h3 {
 }
 
 .btn:hover {
-  transform: scale(1.02);
   transition: all 0.2s ease-in-out;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .text-center {
@@ -82,10 +82,19 @@ body {
   color: var(--pri-color);
   line-height: 1.5;
 }
+
 a {
   text-decoration: none;
   color: var(--sec-color);
   cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+a:active {
+  color: var(--spec-color);
 }
 
 .header {
@@ -119,6 +128,10 @@ nav {
   left: 0;  
   right: 0;
   z-index: 1000;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 nav .logo small {
@@ -219,6 +232,8 @@ img {
 .official-symbol {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
 }
 
 .hidden {
@@ -231,6 +246,7 @@ img {
   margin-top: 2rem;
 }
 
+/* Mobile */
 @media (max-width: 500px) {
   .country-details {
     font-size: 12px;
@@ -286,6 +302,7 @@ img {
     grid-template-columns: repeat(1, 1fr);
     margin: 1rem 1rem;
   }
+
   .error-message {
     padding: 0.5rem;
     margin-top: 2rem 1rem;
@@ -293,7 +310,8 @@ img {
 
 }
 
-@media (max-width: 750px) {
+/* Tablet */
+@media (max-width: 800px) {
   .country-details {
     font-size: 12px;
   }
@@ -316,5 +334,37 @@ img {
   .hero p {
     font-size: 0.8rem;
 
+  }
+}
+
+/* LandScape mode */
+@media (max-height: 390px) {
+  .country-details {
+    font-size: 12px;
+  }
+  .country-details span {
+    font-size: 16px;
+  }
+  #input-form input {
+    width: 200px;
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+
+  div.hero h1 {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero p {
+    font-size: 0.8rem;
+
+  }
+
+  .header {
+    height: 100vh;
+    width: 100vw;
   }
 }
