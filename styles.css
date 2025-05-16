@@ -262,6 +262,7 @@ footer.main {
   max-width: 1200px;
   border-radius: 5px;
   margin: 0 auto;
+  gap: 5px;
 }
 
 nav.footer-nav {
