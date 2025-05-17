@@ -1,5 +1,5 @@
 
-import { fetchAPI, fetchUrls } from "./modules/api.js";
+import { fetchAPI } from "./modules/api.js";
 import { countryUI } from "./modules/dom.js";
 import { inputSanitiazer, convertToLatlng, convertToPopulation, convertToArea } from "./modules/utilis.js";
 import { cityValidator } from "./modules/validation.js";
@@ -18,8 +18,7 @@ const init = () => {
       // Check if the city is empty or contains invalid characters
       cityValidator(city);
       const rawData = await fetchAPI(city);
-      const newsData = await fetchUrls(city);
-      console.log(newsData);
+      
       console.log(rawData);
 
       const processedData = {
