@@ -242,7 +242,7 @@ img {
 .error-message {
   background: #ccc;
   color: red;
-  padding: 0.5rem;
+  padding: 3px;
   margin-top: 2rem;
 }
 
